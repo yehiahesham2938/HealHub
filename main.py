@@ -1,4 +1,5 @@
 from flask import Flask, request, render_template
+from NormalUser import NormalUser
 from administrator import administrator
 app = Flask(__name__ , static_folder='static')
 
@@ -16,7 +17,7 @@ def login():
             else:
                 return 'Invalid username or password'
         else:
-            return render_template ("NormalUser.html")
+            return NormalUser()
     else:
         return render_template('index.html')
 
