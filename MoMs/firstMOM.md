@@ -9,7 +9,7 @@
 **Attendees:**
 - Yehia
 - Seif
--Haneen
+- Haneen
 
 **Agenda:**
 - Discussion on Using Flask as the backend framework for the system.
