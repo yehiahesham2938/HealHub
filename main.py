@@ -1,4 +1,5 @@
 from flask import Flask, request, render_template
+from administrator import administrator
 app = Flask(__name__ , static_folder='static')
 
 @app.route('/', methods=['GET', 'POST'])
@@ -10,8 +11,8 @@ def login():
             password = request.form.get('password')
             print("Username:", username)
             print("Password:", password)
-            if username == 'yaya' and password == 'admin':
-                return render_template('administrator.html')
+            if username == 'admin' and password == 'admin':
+                return administrator()
             else:
                 return 'Invalid username or password'
         else:
