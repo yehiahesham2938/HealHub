@@ -15,7 +15,7 @@ def login():
             if username == 'admin' and password == 'admin':
                 return administrator()
             else:
-                return 'Invalid username or password'
+                return 'Invalid username or pass'
         else:
             return NormalUser()
     else:
