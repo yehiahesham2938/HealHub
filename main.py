@@ -15,7 +15,33 @@ def login():
             if username == 'admin' and password == 'admin':
                 return administrator()
             else:
-                return 'Invalid username or pass'
+                return '''
+                <html>
+                    <title>
+                         Invalid 
+                    </title>
+
+                    <body>
+                        <style>
+                            body 
+                            {
+                                font-size: 25px;
+                                text-align: center;
+                            }
+                            input
+                            {
+                                font-size: 18px;
+                            }
+                        </style>
+                        <form>
+                            username or password is incorrect please try again!
+                            <br>
+                            <br>
+                            <input type="submit" value="Tryagain" style="width: 450px;">
+                        </form>
+                    </body>
+                </html>
+                '''
         else:
             return NormalUser()
     else:
