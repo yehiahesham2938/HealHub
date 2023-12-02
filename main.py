@@ -25,16 +25,16 @@ def login():
                         <style>
                             body 
                             {
-                                font-size: 25px;
+                                font-size: 29px;
                                 text-align: center;
                             }
                             input
                             {
-                                font-size: 18px;
+                                font-size: 19px;
                             }
                         </style>
                         <form>
-                            username or password is incorrect please try again!
+                           <b> username or password is incorrect please try again!</b>
                             <br>
                             <br>
                             <input type="submit" value="Tryagain" style="width: 450px;">
