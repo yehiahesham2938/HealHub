@@ -4,17 +4,10 @@
     <title>Login Page</title>
 </head>
 <body>
-    <img src="{{ url_for('static', filename='HealHubLogo.png') }}" height="250px" id="HealHub Logo"/>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <img src="{{ url_for('static', filename='HealHubLogo.png') }}" height="250px" id="HealHubLogo"/>
     <br>
     <br>
-    <style> 
-        body
-        {
-            font-size: 30;
-            background-color: rgb(255, 255, 255);
-            text-align: center;
-        } 
-    </style>
     <form method="POST" action="/">
         <label>User Type:</label>
         <select id="usertype" name="usertype" style=" width: 400;">
