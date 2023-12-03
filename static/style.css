@@ -1,4 +1,4 @@
-/* Reset some default styles */
+
 body, h1, h2, p, form {
     margin: 0;
     padding: 0;
@@ -6,7 +6,7 @@ body, h1, h2, p, form {
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #fff; /* Set background color to white */
+    background-color: #fff; 
 }
 
 #HealHubLogo {
@@ -47,7 +47,7 @@ input[type="submit"], input[type="reset"] {
 }
 
 input[type="submit"]:hover, input[type="reset"]:hover {
-    background-color: #45a049;
+    background-color: #09f215;
 }
 
 .error-message {
