@@ -1,10 +1,58 @@
-<!DOCTYPE html>
-<html >
-<head>
-   
-    <title> administrator</title>
+ <!DOCTYPE html>
+ <html>
+    <head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+   <title><strong>administrator page</strong></title>
 </head>
 <body>
-    Welcome <mark>administrator</mark>
-</body>
-</html>
+    <h1>welcome,administrator</h1>
+    <details>
+        <summary>add</summary>
+     <details>
+     <summary>add doctor</summary>
+     <form method="POST">
+     <div class="info-box">
+     <label for="doctor_name">Name:</label>
+     <input type="text" id="doctor_name" name="doctor_name"placeholder="seif" required>
+     <label for="doctor_age">Age:</label>
+     <input type="text" id="doctor_age" name="doctor_age"placeholder="45" required>
+     <label for="doctor_id">ID : </label>
+     <input type="text" id="doctor_id" name="doctor_id" placeholder="D_202201510" required>
+     <label for="doctor_office number">Office Number : </label>
+     <input type="text" id=" doctor_office number" name=" doctor_office number" placeholder="66" required>
+     <label for="doctor_salary">Salary:</label>
+     <input type="text" id="doctor_salary" name="doctor_salary"placeholder="1000" required>
+     </div>
+     <input type="submit" value="Add Doctor">
+     <input type="reset" value="reset">
+     </form>
+     </details>
+     <br>
+     <br>
+     <details>
+    <summary>Add Patient</summary>
+    <form method="POST" action="/add_patient">
+    <div class="info-box">
+    <label for="patient_name">Name:</label>
+    <input type="text" id="patient_name" name="patient_name"placeholder="mohamed" required>
+    <label for="Patient_id">ID:</label>
+    <input type="text" id="patient_id" name="patient_id"placeholder="P_3000" required>
+    <label for="patient_age">Age:</label>
+    <input type="text" id="patient_age" name="patient_age"placeholder="50" required>
+    <label for="patient_height">Height:</label>
+    <input type="text" id="patient_height" name="patient_height" placeholder="175"required> 
+    <label for="patient_weight">Weight:</label>
+    <input type="text" id="patient_weight" name="patient_weight" placeholder="75"required>
+    <label for="patient_blood.type">Blood Type:</label>
+    <input type="text" id="patient_blood.type" name="patient_blood.type" placeholder="A+,A-,B+,B-,O+,O-,AB+,AB-"required>
+    <label for="patient_condition">Condition:</label>
+    <input type="text" id="patient_condition" name="patient_condition"placeholder="good,bad,....." required>
+    </div>
+    <input type="submit" value="Add Patient">
+    <input type="reset" value="reset">
+    </form>
+    </details>
+    </details>
+    </body>
+    </html>
