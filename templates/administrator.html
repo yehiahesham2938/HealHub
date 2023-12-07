@@ -24,9 +24,13 @@
      <label for="doctor_salary">Salary:</label>
      <input type="text" id="doctor_salary" name="doctor_salary"placeholder="1000$" required>
      <label for="doctor_Gender">Gender:</label>
-     <input type="text" id="doctor_Gender" name="doctor_Gender"placeholder="Male,female" required>
+     <select id="usertype" name="usertype" style=" width: 400;">
+      <option>Male</option>
+      <option>Female</option>
+  </select>
 
      </div>
+     <br>
      <input type="submit" value="Add Doctor">
      <input type="reset" value="reset">
      </form>
@@ -55,7 +59,11 @@
     <label for="patient_condition">Condition:</label>
     <input type="text" id="patient_condition" name="patient_condition"placeholder="good,bad,....." required>
     <label for="Patient">Gender:</label>
-    <input type="text" id="Patient" name="Patient"placeholder="Male,female" required>
+    <select id="usertype" name="usertype" style=" width: 400;">
+    <option>Male</option>
+    <option>Female</option>
+  </select>
+  <br>
     </div>
     <input type="submit" value="Add Patient">
     <input type="reset" value="reset">
@@ -76,12 +84,70 @@
    <label for="Nurse_salary">Salary:</label>
    <input type="text" id="Nurse_salary" name="Nurse_salary"placeholder="1000$" required>
    <label for="Nurse_Gender">Gender:</label>
-   <input type="text" id="Nurse_Gender" name="Nurse_Gender"placeholder="Male,female" required>
+   <select id="usertype" name="usertype" style=" width: 400;">
+      <option>Male</option>
+      <option>Female</option>
+  </select>
+  <br>
    </div>
    <input type="submit" value="Add Patient">
    <input type="reset" value="reset">
    </form>  
    </details>
+   <br>
+   <br>
+    <details>
+      <summary>add Pharmacist</summary>
+      <form method="POST">
+         <div class="info-box">
+    <label for="Pharmacist_name">Name</label>
+    <input type="text" id="Pharmacist_name" name="Pharmacist_name"placeholder="Yehia" required>
+    <label for="Pharmacist">Age:</label>
+    <input type="text" id="Pharmacist_age" name="Pharmacist_age"placeholder="45" required>
+    <label for="Pharmacist">ID:</label>
+    <input type="text" id="Pharmacist_ID" name="Pharmacist_ID"placeholder="P_3000" required>
+    <label for="Nurse_salary">Salary:</label>
+    <input type="text" id="Pharmacist_Salary" name="Pharmacist_Salary"placeholder="1000$" required>
+    <label for="Nurse_Gender">Gender:</label>
+    <select id="usertype" name="usertype" style=" width: 400;">
+       <option>Male</option>
+       <option>Female</option>
+   </select>
+   <br>
+ 
+         </div>
+          
+      </form> 
+    </details>
+    <br>
+    <br>
+    <details>
+      <summary>add Anesthesiologist</summary>
+      <form method="POST">
+         <div class="info-box">
+    <label for="Anesthesiologist_Name">Name</label>
+    <input type="text" id=" Anesthesiologist_name" name="Anesthesiologist_name"placeholder="haneen" required>
+    <label for="Anesthesiologist_age">Age:</label>
+    <input type="text" id="Anesthesiologist_age" name="Anesthesiologist_age"placeholder="45" required>
+    <label for="Anesthesiologist_ID">ID:</label>
+    <input type="text" id="Anesthesiologist_ID" name="Anesthesiologist_ID"placeholder="A_3000" required>
+    <label for="Anesthesiologist_salary">Salary:</label>
+    <input type="text" id="Anesthesiologist_Salary" name="Anesthesiologist_Salary"placeholder="1000$" required>
+    <label for="Anesthesiologist_Gender">Gender:</label>
+    <select id="usertype" name="usertype" style=" width: 400;">
+       <option>Male</option>
+       <option>Female</option>
+   </select>
+   <br>
+ 
+         </div>
+          
+      </form>
+ 
+    </details>
+
+   
+
    </details>
    </body>
    </html>
