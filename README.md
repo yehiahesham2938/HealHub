@@ -1,3 +1,5 @@
+[![Build Status](https://dev.azure.com/202202135/HealHub/_apis/build/status%2Fyehiahesham2938.HealHub?branchName=main)](https://dev.azure.com/202202135/HealHub/_build/latest?definitionId=3&branchName=main)
+
 # HealHub
 This is a repository for Hospital Management System
 ## Overview
