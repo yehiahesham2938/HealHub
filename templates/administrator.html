@@ -22,7 +22,10 @@
      <label for="doctor_office number">Office Number : </label>
      <input type="text" id=" doctor_office number" name=" doctor_office number" placeholder="66" required>
      <label for="doctor_salary">Salary:</label>
-     <input type="text" id="doctor_salary" name="doctor_salary"placeholder="1000" required>
+     <input type="text" id="doctor_salary" name="doctor_salary"placeholder="1000$" required>
+     <label for="doctor_Gender">Gender:</label>
+     <input type="text" id="doctor_Gender" name="doctor_Gender"placeholder="Male,female" required>
+
      </div>
      <input type="submit" value="Add Doctor">
      <input type="reset" value="reset">
@@ -32,12 +35,15 @@
      <br>
      <details>
     <summary>Add Patient</summary>
-    <form method="POST" action="/add_patient">
+    <form method="POST"  >
     <div class="info-box">
+
     <label for="patient_name">Name:</label>
     <input type="text" id="patient_name" name="patient_name"placeholder="mohamed" required>
+    
     <label for="Patient_id">ID:</label>
     <input type="text" id="patient_id" name="patient_id"placeholder="P_3000" required>
+    
     <label for="patient_age">Age:</label>
     <input type="text" id="patient_age" name="patient_age"placeholder="50" required>
     <label for="patient_height">Height:</label>
@@ -48,11 +54,34 @@
     <input type="text" id="patient_blood.type" name="patient_blood.type" placeholder="A+,A-,B+,B-,O+,O-,AB+,AB-"required>
     <label for="patient_condition">Condition:</label>
     <input type="text" id="patient_condition" name="patient_condition"placeholder="good,bad,....." required>
+    <label for="Patient">Gender:</label>
+    <input type="text" id="Patient" name="Patient"placeholder="Male,female" required>
     </div>
     <input type="submit" value="Add Patient">
     <input type="reset" value="reset">
     </form>
     </details>
-    </details>
-    </body>
-    </html>
+    <br>
+    <br>
+    <details>     
+   <summary>Add Nurse</summary>
+   <form method="POST"> 
+   <div class="info-box">
+   <label for="Nurse_name">Name</label>
+   <input type="text" id="Nurse_name" name="Nurse_name"placeholder="rawan" required>
+   <label for="Nurse_age">Age:</label>
+   <input type="text" id="Nurse_age" name="Nurse_age"placeholder="45" required>
+   <label for="Nurse_id">ID:</label>
+   <input type="text" id="Nurse_id" name="Nurse_id"placeholder="N_3000" required>
+   <label for="Nurse_salary">Salary:</label>
+   <input type="text" id="Nurse_salary" name="Nurse_salary"placeholder="1000$" required>
+   <label for="Nurse_Gender">Gender:</label>
+   <input type="text" id="Nurse_Gender" name="Nurse_Gender"placeholder="Male,female" required>
+   </div>
+   <input type="submit" value="Add Patient">
+   <input type="reset" value="reset">
+   </form>  
+   </details>
+   </details>
+   </body>
+   </html>
