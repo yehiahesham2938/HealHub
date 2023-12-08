@@ -20,7 +20,6 @@ def login():
                     <title>
                          Invalid 
                     </title>
-
                     <body>
                         <style>
                             body 
@@ -49,4 +48,3 @@ def login():
 
 if __name__ == '__main__':
     app.run()
-

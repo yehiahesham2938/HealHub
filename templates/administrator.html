@@ -55,15 +55,24 @@
     <label for="patient_weight">Weight:</label>
     <input type="text" id="patient_weight" name="patient_weight" placeholder="75"required>
     <label for="patient_blood.type">Blood Type:</label>
-    <input type="text" id="patient_blood.type" name="patient_blood.type" placeholder="A+,A-,B+,B-,O+,O-,AB+,AB-"required>
+     <select>
+      <option>A+</option>
+      <option>A-</option>
+      <option>B+</option>
+      <option>B-</option>
+      <option>O+</option>
+      <option>O-</option>
+      <option>AB+</option>
+      <option>AB-</option>
+     </select>
     <label for="patient_condition">Condition:</label>
     <input type="text" id="patient_condition" name="patient_condition"placeholder="good,bad,....." required>
     <label for="Patient">Gender:</label>
     <select id="usertype" name="usertype" style=" width: 400;">
     <option>Male</option>
     <option>Female</option>
-  </select>
-  <br>
+    </select>
+    <br> 
     </div>
     <input type="submit" value="Add Patient">
     <input type="reset" value="reset">
