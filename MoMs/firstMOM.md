@@ -50,6 +50,6 @@
 - All team members: Provide regular updates on progress and raise any concerns during subsequent meetings.
 
 **Next Meeting:**
-- Date: Saturday 2 December 2023
-- Time: 6:30
+- Date: Saturday 17 December 2023
+- Time: 4:00
 - Location: Online Meeting
