@@ -10,7 +10,7 @@ def login():
         if usertype == 'Administrator':
             username = request.form.get('username')
             password = request.form.get('password')
-            print("Username:", username)
+            print("Username:::::::::::::::::", username)
             print("Password:", password)
             if username == 'admin' and password == 'admin':
                 return administrator()
