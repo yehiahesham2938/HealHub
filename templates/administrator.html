@@ -158,26 +158,51 @@
                 <input type="reset" value="reset">
             </form>
         </details>
+    </details>    
+        <details>
+            <summary>View Info</summary>
 
-        <!-- Other fixed-positioned buttons -->
-        <form method="GET" action="{{ url_for('display_doctor_info') }}" style="position: fixed; bottom: 50px; right: 5px;">
-            <button type="submit" style="font-size: 12px; padding: 5px;">Doctor Info</button>
-        </form>
+            <details>
+                <summary>View Doctors</summary>
 
-        <form method="GET" action="{{ url_for('display_patients_info') }}" style="position: fixed; bottom: 5px; right: 5px;">
-            <button type="submit" style="font-size: 12px; padding: 5px;">Patient Info</button>
+        <form method="GET" action="{{ url_for('display_doctor_info') }}">
+            <button class="btn"> View
+            </button>      
         </form>
+            </details>
 
-        <form method="GET" action="{{ url_for('display_nurse_info') }}" style="position: fixed; bottom: 90px; right: 5px;">
-            <button type="submit" style="font-size: 12px; padding: 5px;">Nurse Info</button>
-        </form>
+            <details>
+                <summary>View patients</summary>
 
-        <form method="GET" action="{{ url_for('display_Pharmacist_info') }}" style="position: fixed; bottom: 130px; right: 5px;">
-            <button type="submit" style="font-size: 12px; padding: 5px;">Pharmacist Info</button>
-        </form>
+        <form method="GET" action="{{ url_for('display_patients_info') }}">
+            <button class="btn"> View
+            </button>           </form>
+            </details>
 
-        <form method="GET" action="{{ url_for('display_Anesthesiologist_info') }}" style="position: fixed; bottom: 170px; right: 5px;">
-            <button type="submit" style="font-size: 12px; padding: 5px;">Anesthesiologist Info</button>
-        </form>
+            <details>
+                <summary>View Nurses</summary>
+
+        <form method="GET" action="{{ url_for('display_nurse_info') }}">
+            <button class="btn"> View
+            </button>           </form>
+            </details>
+
+            <details>
+                <summary>View Pharmacists</summary>
+
+        <form method="GET" action="{{ url_for('display_Pharmacist_info') }}">
+            <button class="btn"> View
+            </button>           </form>
+            </details>
+
+            <details>
+                <summary>View Anesthesiologists</summary>
+
+        <form method="GET" action="{{ url_for('display_Anesthesiologist_info') }}" >
+            <button class="btn"> View
+            </button>           </form>
+            </details>
+    </form>
+        </details>
     </body>
 </html>

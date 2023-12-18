@@ -3,11 +3,13 @@
 
 <head>
     <title>Patient Data</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
 </head>
 
 <body>
     <h1>Patient Data</h1>
-    <table border="1">
+    <table border="1"  class="styled-table">
         <tr>
             <th>Name</th>
             <th>Age</th>
@@ -20,7 +22,7 @@
             <th>prescription</th>
         </tr>
         {% for patient in data %}
-        <tr>
+        <tr  class="active-row">
             <td>{{ patient['Name'] }}</td>
             <td>{{ patient['Age'] }}</td>
             <td>{{ patient['ID'] }}</td>

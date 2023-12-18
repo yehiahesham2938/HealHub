@@ -3,6 +3,8 @@
 
 <head>
     <title>Anesthesiologist Data</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
 </head>
 
 <head>
@@ -11,7 +13,7 @@
 
 <body>
     <h1>Anesthesiologist Data</h1>
-    <table border="1">
+    <table border="1"  class="styled-table">
         <tr>
             <th>Name</th>
             <th>Age</th>
@@ -20,7 +22,7 @@
             <th>Gender</th>
         </tr>
         {% for Anesthesiologist in data %}
-        <tr>
+        <tr  class="active-row">
             <td>{{ Anesthesiologist['Name'] }}</td>
             <td>{{ Anesthesiologist['Age'] }}</td>
             <td>{{ Anesthesiologist['ID']}}</td>
