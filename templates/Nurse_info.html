@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Nurse Data</title>
+</head>
+
+<body>
+    <h1>Nurse Data</h1>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>ID</th>
+            <th>Salary</th>
+            <th>Gender</th>
+        </tr>
+        {% for nurse in data %}
+        <tr>
+            <td>{{ nurse['Name'] }}</td>
+            <td>{{ nurse['Age'] }}</td>
+            <td>{{ nurse['ID'] }}</td>
+            <td>{{ nurse['Salary'] }}</td>
+            <td>{{ nurse['Gender'] }}</td>
+        </tr>
+        {% endfor %}
+        
+    </table>
+</body>

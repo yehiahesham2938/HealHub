@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Display Data</title>
+</head>
+
+<body>
+    <h1>Patient Data</h1>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>ID</th>
+            <th>Height:</th>
+            <th>weight</th>
+            <th>Blood type</th>
+            <th>Condition</th>
+            <th>Gender</th>
+        </tr>
+        {% for patient in data %}
+        <tr>
+            <td>{{ patient['Name'] }}</td>
+            <td>{{ patient['Age'] }}</td>
+            <td>{{ patient['ID'] }}</td>
+            <td>{{ patient['Height'] }}</td>
+            <td>{{ patient['Weight'] }}</td>
+            <td>{{ patient['patient_blood.type'] }}</td>
+            <td>{{ patient['patient_condition'] }}</td>
+            <td>{{ patient['Patient'] }}</td>
+        </tr>
+        {% endfor %}
+        
+    </table>
+</body>
+
+
+
+
+
+</html>

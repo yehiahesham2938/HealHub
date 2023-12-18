@@ -40,7 +40,7 @@
      <br>
      <details>
     <summary>Add Patient</summary>
-    <form method="POST"  >
+    <form method="POST" action="{{ url_for('Add_Patient') }}" >
     <div class="info-box">
 
     <label for="patient_name">Name:</label>
@@ -83,7 +83,7 @@
     <br>
     <details>     
    <summary>Add Nurse</summary>
-   <form method="POST"> 
+   <form method="POST" action="{{ url_for('add_nurse') }}"> 
    <div class="info-box">
    <label for="Nurse_name">Name</label>
    <input type="text" id="Nurse_name" name="Nurse_name"placeholder="rawan" required>
@@ -154,11 +154,19 @@
           
       </form>
  
-    </details>
-    <form method="GET" action="{{ url_for('display_doctor_info') }}" style="position: fixed; bottom: 10px; right: 10px;">
-      <button type="submit" style="font-size: 12px; padding: 5px;">Doctor Info</button>
+ </details>
+
+    <form method="GET" action="{{ url_for('display_doctor_info') }}" style="position: fixed; bottom: 50px; right: 5px;">
+        <button type="submit" style="font-size: 12px; padding: 5px;">Doctor Info</button>
+    </form>
+
+    <form method="GET" action="{{ url_for('display_patients_info') }}" style="position: fixed; bottom: 5px; right: 5px;">
+        <button type="submit" style="font-size: 12px; padding: 5px;">Patient Info</button>
+    </form>
+
+    <form method="GET" action="{{ url_for('display_nurse_info') }}" style="position: fixed; bottom: 90px; right: 5px;">
+      <button type="submit" style="font-size: 12px; padding: 5px;">Nurse Info</button>
   </form>
-   </details>
-</form>
-   </body>
-   </html>
+</body>
+
+</html>
