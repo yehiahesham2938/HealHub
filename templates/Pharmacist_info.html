@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pharmacist Data</title>
+</head>
+
+<head>
+    <title>Pharmacist Data</title>
+</head>
+
+<body>
+    <h1>Pharmacist Data</h1>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>ID</th>
+            <th>Salary</th>
+            <th>Gender</th>
+        </tr>
+        {% for Pharmacist in data %}
+        <tr>
+            <td>{{ Pharmacist['Name'] }}</td>
+            <td>{{ Pharmacist['Age'] }}</td>
+            <td>{{ Pharmacist['ID'] }}</td>
+            <td>{{ Pharmacist['Salary'] }}</td>
+            <td>{{ Pharmacist['Gender'] }}</td>
+        </tr>
+        {% endfor %}
+        
+    </table>
+</body>

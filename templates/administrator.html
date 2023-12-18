@@ -1,172 +1,180 @@
- <!DOCTYPE html>
- <html>
-    <head>
+<!DOCTYPE html>
+<html>
+<head>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-
-   <title><strong>Administrator page</strong></title>
+    <title><strong>Administrator page</strong></title>
 </head>
 <body>
-    <h1>welcome,Administrator</h1>
+    <h1>Welcome, Administrator</h1>
     <details>
         <summary>Add</summary>
-     <details>
-      
-     <summary>add doctor</summary>
-     <form method="POST" action="{{ url_for('add_doctor') }}">
-     <div class="info-box">
-     <label for="doctor_name">Name:</label>
-     <input type="text" id="doctor_name" name="doctor_name"placeholder="seif" required>
-     <label for="doctor_age">Age:</label>
-     <input type="text" id="doctor_age" name="doctor_age"placeholder="45" required>
-     <label for="doctor_id">ID : </label>
-     <input type="text" id="doctor_id" name="doctor_id" placeholder="D_202201510" required>
-     <label for="doctor_office_number">Office Number : </label>
-     <input type="text" id=" doctor_office_number" name=" doctor_office_number" placeholder="66" required>
-     <label for="doctor_salary">Salary:</label>
-     <input type="text" id="doctor_salary" name="doctor_salary"placeholder="1000$" required>
-     <label for="doctor_Gender">Gender:</label>
-     <select id="usertype" name="usertype" style=" width: 400;">
-      <option>Male</option>
-      <option>Female</option>
-  </select>
+        <details>
+            <summary>Add doctor</summary>
+            <form method="POST" action="{{ url_for('add_doctor') }}">
+                <div class="info-box">
+                    <label for="doctor_name">Name:</label>
+                    <input type="text" id="doctor_name" name="doctor_name" placeholder="seif" required>
+                    <label for="doctor_age">Age:</label>
+                    <input type="text" id="doctor_age" name="doctor_age" placeholder="45" required>
+                    <label for="doctor_id">ID : </label>
+                    <input type="text" id="doctor_id" name="doctor_id" placeholder="D_202201510" required>
+                    <label for="doctor_office_number">Office Number : </label>
+                    <input type="text" id="doctor_office_number" name="doctor_office_number" placeholder="66" required>
+                    <label for="doctor_salary">Salary:</label>
+                    <input type="text" id="doctor_salary" name="doctor_salary" placeholder="1000$" required>
+                    <label for="doctor_Gender">Gender:</label>
+                    <select id="doctor_Gender" name="doctor_Gender" style="width: 400px;">
+                        <option>Male</option>
+                        <option>Female</option>
+                    </select>
+                </div>
+                <br>
+                <input type="submit" value="Add Doctor">
+                <input type="reset" value="reset">
+            </form>
+        </details>
+        <br>
+        <br>
+        <details>
+            <summary>Add Patient</summary>
+            <form method="POST" action="{{ url_for('Add_Patient') }}">
+                <div class="info-box">
+                    <label for="patient_name">Name:</label>
+                    <input type="text" id="patient_name" name="patient_name" placeholder="mohamed" required>
 
-     </div>
-     <br>
-     <input type="submit" value="Add Doctor">
-     <input type="reset" value="reset">
-     </form>
-     </details>
-     <br>
-     <br>
-     <details>
-    <summary>add Patient</summary>
-    <form method="POST" action="{{ url_for('Add_Patient') }}" >
-    <div class="info-box">
+                    <label for="patient_id">ID:</label>
+                    <input type="text" id="patient_id" name="patient_id" placeholder="P_3000" required>
 
-    <label for="patient_name">Name:</label>
-    <input type="text" id="patient_name" name="patient_name"placeholder="mohamed" required>
-    
-    <label for="Patient_id">ID:</label>
-    <input type="text" id="patient_id" name="patient_id"placeholder="P_3000" required>
-    
-    <label for="patient_age">Age:</label>
-    <input type="text" id="patient_age" name="patient_age"placeholder="50" required>
-    <label for="patient_height">Height:</label>
-    <input type="text" id="patient_height" name="patient_height" placeholder="175"required> 
-    <label for="patient_weight">Weight:</label>
-    <input type="text" id="patient_weight" name="patient_weight" placeholder="75"required>
-    <label for="patient_blood.type">Blood Type:</label>
-     <select>
-      <option>A+</option>
-      <option>A-</option>
-      <option>B+</option>
-      <option>B-</option>
-      <option>O+</option>
-      <option>O-</option>
-      <option>AB+</option>
-      <option>AB-</option>
-     </select>
-    <label for="patient_condition">Condition:</label>
-    <input type="text" id="patient_condition" name="patient_condition"placeholder="good,bad,....." required>
-    <label for="Patient">Gender:</label>
-    <select id="usertype" name="usertype" style=" width: 400;">
-    <option>Male</option>
-    <option>Female</option>
-    </select>
-    <br> 
-    </div>
-    <input type="submit" value="Add Patient">
-    <input type="reset" value="reset">
-    </form>
-    </details>
-    <br>
-    <br>
-    <details>     
-   <summary>add Nurse</summary>
-   <form method="POST" action="{{ url_for('add_nurse') }}"> 
-   <div class="info-box">
-   <label for="Nurse_name">Name</label>
-   <input type="text" id="Nurse_name" name="Nurse_name"placeholder="rawan" required>
-   <label for="Nurse_age">Age:</label>
-   <input type="text" id="Nurse_age" name="Nurse_age"placeholder="45" required>
-   <label for="Nurse_id">ID:</label>
-   <input type="text" id="Nurse_id" name="Nurse_id"placeholder="N_3000" required>
-   <label for="Nurse_salary">Salary:</label>
-   <input type="text" id="Nurse_salary" name="Nurse_salary"placeholder="1000$" required>
-   <label for="Nurse_Gender">Gender:</label>
-   <select id="usertype" name="usertype" style=" width: 400;">
-      <option>Male</option>
-      <option>Female</option>
-  </select>
-  <br>
-   </div>
-   <input type="submit" value="Add Patient">
-   <input type="reset" value="reset">
-   </form>  
-   </details>
-   <br>
-   <br>
-    <details>
-      <summary>add Pharmacist</summary>
-      <form method="POST">
-         <div class="info-box">
-    <label for="Pharmacist_name">Name</label>
-    <input type="text" id="Pharmacist_name" name="Pharmacist_name"placeholder="Yehia" required>
-    <label for="Pharmacist">Age:</label>
-    <input type="text" id="Pharmacist_age" name="Pharmacist_age"placeholder="45" required>
-    <label for="Pharmacist">ID:</label>
-    <input type="text" id="Pharmacist_ID" name="Pharmacist_ID"placeholder="P_3000" required>
-    <label for="Nurse_salary">Salary:</label>
-    <input type="text" id="Pharmacist_Salary" name="Pharmacist_Salary"placeholder="1000$" required>
-    <label for="Nurse_Gender">Gender:</label>
-    <select id="usertype" name="usertype" style=" width: 400;">
-       <option>Male</option>
-       <option>Female</option>
-   </select>
-   <br>
- 
-         </div>
-          
-      </form> 
-    </details>
-    <br>
-    <br>
-    <details>
-      <summary>add Anesthesiologist</summary>
-      <form method="POST">
-         <div class="info-box">
-    <label for="Anesthesiologist_Name">Name</label>
-    <input type="text" id=" Anesthesiologist_name" name="Anesthesiologist_name"placeholder="haneen" required>
-    <label for="Anesthesiologist_age">Age:</label>
-    <input type="text" id="Anesthesiologist_age" name="Anesthesiologist_age"placeholder="45" required>
-    <label for="Anesthesiologist_ID">ID:</label>
-    <input type="text" id="Anesthesiologist_ID" name="Anesthesiologist_ID"placeholder="A_3000" required>
-    <label for="Anesthesiologist_salary">Salary:</label>
-    <input type="text" id="Anesthesiologist_Salary" name="Anesthesiologist_Salary"placeholder="1000$" required>
-    <label for="Anesthesiologist_Gender">Gender:</label>
-    <select id="usertype" name="usertype" style=" width: 400;">
-       <option>Male</option>
-       <option>Female</option>
-   </select>
-   <br>
- 
-         </div>
-          
-      </form>
- 
- </details>
+                    <label for="patient_age">Age:</label>
+                    <input type="text" id="patient_age" name="patient_age" placeholder="50" required>
 
-    <form method="GET" action="{{ url_for('display_doctor_info') }}" style="position: fixed; bottom: 50px; right: 5px;">
-        <button type="submit" style="font-size: 12px; padding: 5px;">Doctor Info</button>
-    </form>
+                    <label for="patient_height">Height:</label>
+                    <input type="text" id="patient_height" name="patient_height" placeholder="175" required>
 
-    <form method="GET" action="{{ url_for('display_patients_info') }}" style="position: fixed; bottom: 5px; right: 5px;">
-        <button type="submit" style="font-size: 12px; padding: 5px;">Patient Info</button>
-    </form>
+                    <label for="patient_weight">Weight:</label>
+                    <input type="text" id="patient_weight" name="patient_weight" placeholder="75" required>
 
-    <form method="GET" action="{{ url_for('display_nurse_info') }}" style="position: fixed; bottom: 90px; right: 5px;">
-      <button type="submit" style="font-size: 12px; padding: 5px;">Nurse Info</button>
-  </form>
-</body>
+                    <label for="patient_blood_type">Blood Type:</label>
+                    <select id="patient_blood_type" name="patient_blood_type" style="width: 400px;">
+                        <option>A+</option>
+                        <option>A-</option>
+                        <option>B+</option>
+                        <option>B-</option>
+                        <option>O+</option>
+                        <option>O-</option>
+                        <option>AB+</option>
+                        <option>AB-</option>
+                    </select>
 
+                    <label for="patient_condition">Condition:</label>
+                    <input type="text" id="patient_condition" name="patient_condition" placeholder="good,bad,....." required>
+
+                    <label for="Patient_gender">Gender:</label>
+                    <select id="Patient_gender" name="Patient_gender" style="width: 400px;">
+                        <option>Male</option>
+                        <option>Female</option>
+                    </select>
+                    <br>
+                </div>
+                <input type="submit" value="Add Patient">
+                <input type="reset" value="reset">
+            </form>
+        </details>
+        <br>
+        <br>
+        <details>
+            <summary>Add Nurse</summary>
+            <form method="POST" action="{{ url_for('add_nurse') }}">
+                <div class="info-box">
+                    <label for="Nurse_name">Name</label>
+                    <input type="text" id="Nurse_name" name="Nurse_name" placeholder="rawan" required>
+                    <label for="Nurse_age">Age:</label>
+                    <input type="text" id="Nurse_age" name="Nurse_age" placeholder="45" required>
+                    <label for="Nurse_id">ID:</label>
+                    <input type="text" id="Nurse_id" name="Nurse_id" placeholder="N_3000" required>
+                    <label for="Nurse_salary">Salary:</label>
+                    <input type="text" id="Nurse_salary" name="Nurse_salary" placeholder="1000$" required>
+                    <label for="Nurse_Gender">Gender:</label>
+                    <select id="Nurse_Gender" name="Nurse_Gender" style="width: 400px;">
+                        <option>Male</option>
+                        <option>Female</option>
+                    </select>
+                    <br>
+                </div>
+                <input type="submit" value="Add Nurse">
+                <input type="reset" value="reset">
+            </form>
+        </details>
+        <br>
+        <br>
+        <details>
+            <summary>Add Pharmacist</summary>
+            <form method="POST" action="{{ url_for('add_Pharmacist') }}">
+                <div class="info-box">
+                    <label for="Pharmacist_name">Name</label>
+                    <input type="text" id="Pharmacist_name" name="Pharmacist_name" placeholder="Yehia" required>
+                    <label for="Pharmacist_age">Age:</label>
+                    <input type="text" id="Pharmacist_age" name="Pharmacist_age" placeholder="45" required>
+                    <label for="Pharmacist_ID">ID:</label>
+                    <input type="text" id="Pharmacist_ID" name="Pharmacist_ID" placeholder="P_3000" required>
+                    <label for="Nurse_salary">Salary:</label>
+                    <input type="text" id="Pharmacist_Salary" name="Pharmacist_Salary" placeholder="1000$" required>
+                    <label for="Pharmacist_gender">Gender:</label>
+                    <select id="Pharmacist_gender" name="Pharmacist_gender" style="width: 400px;">
+                        <option>Male</option>
+                        <option>Female</option>
+                    </select>
+                    <br>
+                </div>
+                <input type="submit" value="Add Pharmacist">
+                <input type="reset" value="reset">
+            </form>
+        </details>
+        <br>
+        <br>
+        <details>
+            <summary>Add Anesthesiologist</summary>
+            <form method="POST" action="{{ url_for('add_Anesthesiologist') }}">
+                <div class="info-box">
+                    <label for="Anesthesiologist_Name">Name</label>
+                    <input type="text" id="Anesthesiologist_name" name="Anesthesiologist_name" placeholder="haneen" required>
+                    <label for="Anesthesiologist_age">Age:</label>
+                    <input type="text" id="Anesthesiologist_age" name="Anesthesiologist_age" placeholder="45" required>
+                    <label for="Anesthesiologist_ID">ID:</label>
+                    <input type="text" id="Anesthesiologist_ID" name="Anesthesiologist_ID" placeholder="A_3000" required>
+                    <label for="Anesthesiologist_salary">Salary:</label>
+                    <input type="text" id="Anesthesiologist_Salary" name="Anesthesiologist_Salary" placeholder="1000$" required>
+                    <label for="Anesthesiologist_Gender">Gender:</label>
+                    <select id="Anesthesiologist_Gender" name="Anesthesiologist_Gender" style="width: 400px;">
+                        <option>Male</option>
+                        <option>Female</option>
+                    </select>
+                    <br>
+                </div>
+                <input type="submit" value="Add Anesthesiologist">
+                <input type="reset" value="reset">
+            </form>
+        </details>
+
+        <!-- Other fixed-positioned buttons -->
+        <form method="GET" action="{{ url_for('display_doctor_info') }}" style="position: fixed; bottom: 50px; right: 5px;">
+            <button type="submit" style="font-size: 12px; padding: 5px;">Doctor Info</button>
+        </form>
+
+        <form method="GET" action="{{ url_for('display_patients_info') }}" style="position: fixed; bottom: 5px; right: 5px;">
+            <button type="submit" style="font-size: 12px; padding: 5px;">Patient Info</button>
+        </form>
+
+        <form method="GET" action="{{ url_for('display_nurse_info') }}" style="position: fixed; bottom: 90px; right: 5px;">
+            <button type="submit" style="font-size: 12px; padding: 5px;">Nurse Info</button>
+        </form>
+
+        <form method="GET" action="{{ url_for('display_Pharmacist_info') }}" style="position: fixed; bottom: 130px; right: 5px;">
+            <button type="submit" style="font-size: 12px; padding: 5px;">Pharmacist Info</button>
+        </form>
+
+        <form method="GET" action="{{ url_for('display_Anesthesiologist_info') }}" style="position: fixed; bottom: 170px; right: 5px;">
+            <button type="submit" style="font-size: 12px; padding: 5px;">Anesthesiologist Info</button>
+        </form>
+    </body>
 </html>

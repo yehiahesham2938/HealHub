@@ -5,6 +5,8 @@ app = Flask(__name__ , static_folder='static')
 doctors_data = []
 patients_data= []
 nurses_data=[]
+Pharmacists_data=[]
+Anesthesiologists_data=[]
 
 @app.route('/', methods=['GET', 'POST'])
 def login():
@@ -58,7 +60,7 @@ def add_doctor():
         'ID': request.form.get('doctor_id'),
         'Office Number': request.form.get('doctor_office_number'),
         'Salary': request.form.get('doctor_salary'),
-        'Gender': request.form.get('doctor_gender')
+        'Gender': request.form.get('doctor_Gender')
     }
 
     doctors_data.append(doctor_data)
@@ -80,16 +82,13 @@ def Add_Patient():
         'Height': request.form.get('patient_height'),
         'Weight': request.form.get('patient_weight'),
         'Blood Type': request.form.get('patient_blood_type'),
-
         'patient_condition': request.form.get('patient_condition'),
-
-        'Gender': request.form.get('Patient')
-
+        'Gender': request.form.get('Patient_gender')
     }
 
     patients_data.append(patient_data)
 
-    return render_template('patient_info.html', data=patient_data)
+    return render_template('patient_info.html', data=patients_data)
 
 @app.route('/display_patients_info' , methods=['GET'])
 def display_patients_info():
@@ -115,6 +114,49 @@ def add_nurse():
 def display_nurse_info():
     data=[]
     return render_template('Nurse_info.html', data=nurses_data)
+
+
+@app.route('/add_Pharmacist', methods=['POST'])
+def add_Pharmacist():
+    Pharmacist_data = {
+        'Name': request.form.get('Pharmacist_name'),
+        'Age': request.form.get('Pharmacist_age'),
+        'ID': request.form.get('Pharmacist_ID'),
+        'Salary': request.form.get('Pharmacist_Salary'),
+        'Gender': request.form.get('Pharmacist_gender')
+    }
+
+    Pharmacists_data.append(Pharmacist_data)
+
+    return render_template('Pharmacist_info.html', data=Pharmacists_data)
+
+@app.route('/display_Pharmacist_info', methods=['GET'])
+def display_Pharmacist_info():
+    data=[]
+    return render_template('Pharmacist_info.html', data=Pharmacists_data)
+
+
+
+@app.route('/add_Anesthesiologist', methods=['POST'])
+def add_Anesthesiologist():
+    Anesthesiologist_data = {
+        'Name': request.form.get('Anesthesiologist_name'),
+        'Age': request.form.get('Anesthesiologist_age'),
+        'ID': request.form.get('Anesthesiologist_ID'),
+        'Salary': request.form.get('Anesthesiologist_Salary'),
+        'Gender': request.form.get('Anesthesiologist_Gender')
+    }
+
+    Anesthesiologists_data.append(Anesthesiologist_data)
+
+    return render_template('Anesthesiologist_info.html', data=Anesthesiologists_data)
+
+@app.route('/display_Anesthesiologist_info', methods=['GET'])
+def display_Anesthesiologist_info():
+    data=[]
+    return render_template('Anesthesiologist_info.html', data=Anesthesiologists_data)
+
+
 
 
 
