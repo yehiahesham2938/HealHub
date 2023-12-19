@@ -8,7 +8,6 @@
     <h1>Welcome, Administrator</h1>
     <details>
         <summary>Add</summary>
-        
         <details>
             <summary>Add doctor</summary>
             <form method="POST" action="{{ url_for('add_doctor') }}">
@@ -54,6 +53,9 @@
 
                     <label for="patient_weight">Weight:</label>
                     <input type="text" id="patient_weight" name="patient_weight" placeholder="75" required>
+                    
+                    <label for="patient_prescription">prescription:</label>
+                    <input type="text" id="patient_prescription" name="patient_prescription" placeholder="antibiotics...." required>
 
                     <label for="patient_blood_type">Blood Type:</label>
                     <select id="patient_blood_type" name="patient_blood_type" style="width: 400px;">
@@ -156,23 +158,8 @@
                 <input type="reset" value="reset">
             </form>
         </details>
-        <details>
-        <summary>Add prescription</summary>
-            <form method="POST"action="{{ url_for('Add_Patient') }}" >
-                <div class="info-box">
-                    <label for="patient_name">patients's Name</label>
-                    <input type="text" id="patient_name" name="patient_name" placeholder="haneen" required>
-                    <label for="prescription_written">prescription:</label>
-                    <input type="text" id="prescription_written" name="prescription_written" placeholder="antibiotics......" required>
-                    <br>
-                </div>
-                <input type="submit" value="ok">
-                <input type="reset" value="reset">
-            </form>
-        </details>
-      
 
-        
+        <!-- Other fixed-positioned buttons -->
         <form method="GET" action="{{ url_for('display_doctor_info') }}" style="position: fixed; bottom: 50px; right: 5px;">
             <button type="submit" style="font-size: 12px; padding: 5px;">Doctor Info</button>
         </form>
