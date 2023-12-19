@@ -83,7 +83,8 @@ def Add_Patient():
         'Weight': request.form.get('patient_weight'),
         'Blood Type': request.form.get('patient_blood_type'),
         'patient_condition': request.form.get('patient_condition'),
-        'Gender': request.form.get('Patient_gender')
+        'Gender': request.form.get('Patient_gender'),
+        'prescription':request.form.get('prescription_written')
     }
 
     patients_data.append(patient_data)
