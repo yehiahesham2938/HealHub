@@ -4,32 +4,48 @@
 <head>
     <title>Anesthesiologist Data</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-
-</head>
-
-<head>
-    <title>Anesthesiologist Data</title>
+    <style>
+        /* Add some styles for the delete button */
+        .delete-button {
+            cursor: pointer;
+            color: red;
+            font-weight: bold;
+        }
+    </style>
 </head>
 
 <body>
     <h1>Anesthesiologist Data</h1>
-    <table border="1"  class="styled-table">
+    <table border="1" class="styled-table">
         <tr>
             <th>Name</th>
             <th>Age</th>
             <th>ID</th>
             <th>Salary</th>
             <th>Gender</th>
+            <th>Action</th> 
         </tr>
-        {% for Anesthesiologist in data %}
-        <tr  class="active-row">
-            <td>{{ Anesthesiologist['Name'] }}</td>
-            <td>{{ Anesthesiologist['Age'] }}</td>
-            <td>{{ Anesthesiologist['ID']}}</td>
-            <td>{{ Anesthesiologist['Salary']}}</td>
-            <td>{{ Anesthesiologist['Gender'] }}</td>
+        {% for anesthesiologist in data %}
+        <tr class="active-row" id="row5">
+            <td>{{ anesthesiologist['Name'] }}</td>
+            <td>{{ anesthesiologist['Age'] }}</td>
+            <td>{{ anesthesiologist['ID'] }}</td>
+            <td>{{ anesthesiologist['Salary'] }}</td>
+            <td>{{ anesthesiologist['Gender'] }}</td>
+      
+            <td class="delete-button" onclick="deleteRow('row5')">Delete</td>
         </tr>
         {% endfor %}
-        
+
     </table>
+
+    <script>
+        
+        function deleteRow(rowId) {
+            var row = document.getElementById(rowId); 
+            row.parentNode.removeChild(row); 
+        }
+    </script>
 </body>
+
+</html>

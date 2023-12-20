@@ -23,19 +23,22 @@
             <th>Office Number</th>
             <th>Salary</th>
             <th>Gender</th>
-            <th>Action</th> <!-- Add a new column for the delete button -->
+            <th>Action</th> 
         </tr>
-        <tr class="active-row" id="row1">
-            <td>John Doe</td>
-            <td>35</td>
-            <td>1</td>
-            <td>A123</td>
-            <td>80000</td>
-            <td>Male</td>
-           
+         {% for doctor in data %}
+        <tr class="active-row"  id="row1"> 
+            <td>{{ doctor['Name'] }}</td>
+            <td>{{ doctor['Age'] }}</td>
+            <td>{{ doctor['ID'] }}</td>
+            <td>{{ doctor['Office Number']}}</td>
+            <td>{{ doctor['Salary'] }}</td>
+            <td>{{ doctor['Gender'] }}</td>
             <td class="delete-button" onclick="deleteRow('row1')">Delete</td>
         </tr>
-       
+        {% endfor %}
+            
+        </tr>
+        
 
     </table>
 
