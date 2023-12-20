@@ -65,7 +65,7 @@ def add_doctor():
 
     doctors_data.append(doctor_data)
 
-    return render_template('administrator.html', data=doctors_data)
+    return render_template('doctors_info.html', data=doctors_data)
 
 @app.route('/display_doctor_info', methods=['GET'])
 def display_doctor_info():
@@ -89,7 +89,7 @@ def Add_Patient():
 
     patients_data.append(patient_data)
 
-    return render_template('administrator.html', data=patients_data)
+    return render_template('patient_info.html', data=patients_data)
 
 @app.route('/display_patients_info' , methods=['GET'])
 def display_patients_info():
@@ -109,7 +109,7 @@ def add_nurse():
 
     nurses_data.append(nurse_data)
 
-    return render_template('administrator.html', data=nurses_data)
+    return render_template('Nurse_info.html', data=nurses_data)
 
 @app.route('/display_nurse_info', methods=['GET'])
 def display_nurse_info():
@@ -129,7 +129,7 @@ def add_Pharmacist():
 
     Pharmacists_data.append(Pharmacist_data)
 
-    return render_template('administrator.html', data=Pharmacists_data)
+    return render_template('Pharmacist_info.html', data=Pharmacists_data)
 
 @app.route('/display_Pharmacist_info', methods=['GET'])
 def display_Pharmacist_info():
@@ -150,7 +150,7 @@ def add_Anesthesiologist():
 
     Anesthesiologists_data.append(Anesthesiologist_data)
 
-    return render_template('administrator.html', data=Anesthesiologists_data)
+    return render_template('Anesthesiologist_info.html', data=Anesthesiologists_data)
 
 @app.route('/display_Anesthesiologist_info', methods=['GET'])
 def display_Anesthesiologist_info():
