@@ -8,6 +8,7 @@ nurses_data=[]
 Pharmacists_data=[]
 Anesthesiologists_data=[]
 Room_data=[]
+Attendance=[]
 
 
 @app.route('/', methods=['GET', 'POST'])
@@ -203,7 +204,41 @@ def display_Room_info():
     return render_template('Room_info.html', data=Room_data)
 
 
+ 
+
+
+@app.route('/add_ Attendance', methods=['POST'])
+def add_Attendance():
+    Attendance_data = {
+         'Name': request.form.get(' employee_name'),
+        'salary': request.form.get(' employee_Salary '),
+        'ID': request.form.get('  employee_ID'),
+        'attendance': request.form.get(' employee_attdendance '),
+    }
+
+    Attendances_data.append(Attendance_data)
+
+    return render_template('administrator.html', data=Attendances_data)
+
+@app.route('/display_Attendance_info', methods=['GET'])
+def display_Attendance_info():
+    data=[]
+    return render_template('Attendance_info.html', data= Attendance_data)
+
+
+
+
+
+
+
 
 
 if __name__ == '__main__':
     app.run()
+
+
+
+
+
+
+     
