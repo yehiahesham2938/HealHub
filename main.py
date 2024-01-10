@@ -216,14 +216,14 @@ def add_Attendance():
         'attendance': request.form.get(' employee_attdendance '),
     }
 
-    Attendances_data.append(Attendance_data)
+    Attendance_data.append(Attendance_data)
 
-    return render_template('administrator.html', data=Attendances_data)
+    return render_template('administrator.html', data=Attendance)
 
 @app.route('/display_Attendance_info', methods=['GET'])
 def display_Attendance_info():
     data=[]
-    return render_template('Attendance_info.html', data= Attendance_data)
+    return render_template('Attendance_info.html', data= Attendance)
 
 
 
