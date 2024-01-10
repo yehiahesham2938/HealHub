@@ -169,6 +169,35 @@
                 <input type="reset" value="reset">
             </form>
         </details>
+
+        <details>
+            <summary>add Room</summary>
+            <form method="POST" action="{{ url_for('add_Room') }}">
+                <div class="info-box">
+             
+                    <label for="patient_name_room">Patient Name:</label>
+                    <input type="text" id="patient_name_room" name="patient_name_room" placeholder="hassan ali" required>
+                    
+                    <label for="patient_ID">Patient ID:</label>
+                    <input type="text" id="patient_ID_room" name="patient_ID" placeholder="202201515" required>
+    
+    
+                    <label for="patient_age_room">Patient Age:</label>
+                    <input type="text" id="patient_age_room" name="patient_age_room" placeholder="55" required>
+    
+                    <label for="patient_height_room">Patient Height:</label>
+                    <input type="text" id="patient_height_room" name="patient_height_room" placeholder="175" required>
+    
+                    <label for="days_needed">Days Needed:</label>
+                    <input type="text" id="days_needed" name="days_needed" placeholder="3" required>
+                </div>
+                <input type="submit" value="Add Room">
+                <input type="reset" value="reset">
+                </form>
+        </details>
+
+
+
     </details>    
         <details>
             <summary>View Info</summary>
@@ -221,30 +250,6 @@
                 <button class="btn">Logout</button>
             </form>
         </div>
-        <details>
-            <summary>Add Room</summary>
-        
-            <details>
-                <summary>Assign Room</summary>
-        
-                 
-                        <label for="patient_name_room">Patient Name:</label>
-                        <input type="text" id="patient_name_room" name="patient_name_room" placeholder="hassan ali" required>
-                        
-                        <label for="patient_ID">Patient ID:</label>
-                        <input type="text" id="patient_ID" name="patient_ID" placeholder="202201515" required>
-        
-        
-                        <label for="patient_age_room">Patient Age:</label>
-                        <input type="text" id="patient_age_room" name="patient_age_room" placeholder="55" required>
-        
-                        <label for="patient_height_room">Patient Height:</label>
-                        <input type="text" id="patient_height_room" name="patient_height_room" placeholder="175" required>
-        
-                        <label for="days_needed">Days Needed:</label>
-                        <input type="text" id="days_needed" name="days_needed" placeholder="3" required>
-            </details>
-        </details>
         
     </body>
 </html>

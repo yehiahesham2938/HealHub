@@ -7,6 +7,8 @@ patients_data= []
 nurses_data=[]
 Pharmacists_data=[]
 Anesthesiologists_data=[]
+Room_data=[]
+
 
 @app.route('/', methods=['GET', 'POST'])
 def login():
@@ -178,6 +180,27 @@ def display_Anesthesiologist_info():
     data=[]
     return render_template('Anesthesiologist_info.html', data=Anesthesiologists_data)
 
+
+
+
+
+@app.route('/add_Room', methods=['POST'])
+def add_Room():
+    Room_data = {
+        'Name': request.form.get(' patient_name_room'),
+        'Age': request.form.get(' patient_age_room'),
+        'ID': request.form.get(' patient_ID_Room'),
+        'days_needed': request.form.get(' days_needed'),
+    }
+
+    Room_data.append(Room_data)
+
+    return render_template('administrator.html', data=Room_data)
+
+@app.route('/display_Room_info', methods=['GET'])
+def display_Room_info():
+    data=[]
+    return render_template('Room_info.html', data=Room_data)
 
 
 
