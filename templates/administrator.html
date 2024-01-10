@@ -169,6 +169,30 @@
                 <input type="reset" value="reset">
             </form>
         </details>
+        <br>
+        <br>
+        <details>
+            <summary>add Medicine</summary>
+            <form method="POST" action="{{ url_for('add_medicine') }}">
+                <div class="info-box">
+             
+                    <label for="Medicine">Medicine Name:</label>
+                    <input type="text" id="Medicine_name" name="Medicine_name" placeholder="panadol" required>
+                    
+                    <label for="Medicine_price">Medicine price:</label>
+                    <input type="text" id="Medicine_price" name="Medicine_price" placeholder="55" required>
+    
+    
+                    <label for="Medicine_stock">Medicine stock:</label>
+                    <input type="text" id="Medicine_stock" name="Medicine_stock" placeholder="500" required>
+    
+                    <label for="Medicine_need">Medicine need:</label>
+                    <input type="text" id="Medicine_need" name="Medicine_need" placeholder="450" required>
+                </div>
+                <input type="submit" value="Add Medicine">
+                <input type="reset" value="reset">
+                </form>
+        </details>
 
         <details>
             <summary>add Room</summary>

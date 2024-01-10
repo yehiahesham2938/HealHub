@@ -9,7 +9,7 @@ Pharmacists_data=[]
 Anesthesiologists_data=[]
 Room_data=[]
 Attendance=[]
-
+medicines_data=[]
 
 @app.route('/', methods=['GET', 'POST'])
 def login():
@@ -227,8 +227,24 @@ def display_Attendance_info():
 
 
 
+@app.route('/add_medicine', methods=['POST'])
+def add_medicine():
+    medicine_data = {
+        'Name': request.form.get(' Medicine_name'),
+        'price': request.form.get(' Medicine_price'),
+        'stock': request.form.get(' Medicine_stock'),
+        'need': request.form.get(' Medicine_need'),
+     }
+
+    medicines_data.append(medicine_data)
+
+    return render_template('administrator.html', data=medicines_data)
 
 
+@app.route('/display_medicine_info', methods=['GET'])
+def display_medicine_info():
+    data=[]
+    return render_template('medicine_info.html', data=medicines_data)
 
 
 
