@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -13,7 +13,7 @@
 
     <nav>
         <ul>
-            <li><a href="#">Home</a></li>
+            <li><a>Home</a></li>
             <li><a href="#">Appointments</a></li>
             <li><a href="#">Doctors</a></li>
             <li><a href="#">Contact</a></li>
@@ -29,5 +29,469 @@
     <footer>
         <p>&copy; 2023 Hospital Management System. All rights reserved.</p>
     </footer>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+     <title>HealHub</title>
+
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="author" content="Tooplate">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+     <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}">
+     <link rel="stylesheet" href="{{ url_for('static', filename='font-awesome.min.css') }}">
+     <link rel="stylesheet" href="{{ url_for('static', filename='animate.css') }}">
+     <link rel="stylesheet" href="{{ url_for('static', filename='owl.carouse1.css') }}">
+     <link rel="stylesheet" href="{{ url_for('static', filename='owl.theme.default.min.css') }}">
+     <style>
+          .btn-container {
+              text-align: center;
+          }
+      
+          .btn {
+              padding: 15px 30px;
+              font-size: 18px; 
+          }
+          
+      </style>
+     <!-- MAIN CSS -->
+     <link rel="stylesheet" href="{{ url_for('static', filename='tooplate-style.css') }}">
+
+</head>
+
+     <!-- PRE LOADER -->
+     <section class="preloader">
+          <div class="spinner">
+
+               <span class="spinner-rotate"></span>
+               
+          </div>
+     </section>
+
+
+     <header>
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-4 col-sm-5">
+                         <p>Welcome to HealHub</p>
+                    </div>
+                         
+                    <div class="col-md-8 col-sm-7 text-align-right">
+                         <span class="phone-icon"> 010-060-0160</span>
+                         <span class="date-icon"> 6:00 AM - 10:00 PM (Mon-Fri)</span>
+                         <span class="email-icon"> <a>info@healhub.com</a></span>
+                    </div>
+
+               </div>
+          </div>
+     </header>
+
+
+     <section class="navbar navbar-default navbar-static-top" role="navigation">
+          <div class="container">
+
+               <div class="navbar-header">
+                    <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                    </button>
+
+                    <!-- lOGO TEXT HERE -->
+                    <a href="NormalUser.html" class="navbar-brand"> HealHub</a>
+               </div>
+
+               <!-- MENU LINKS -->
+               <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                         <li><a href="#about" class="smoothScroll">About Us</a></li>
+                         <li><a href="#team" class="smoothScroll">Doctors</a></li>
+                         <li><a href="#news" class="smoothScroll">News</a></li>
+                         <li><a href="#google-map" class="smoothScroll">Contact</a></li>
+                         <li class="appointment-btn"><a href="#appointment">Make an appointment</a></li>
+                    </ul>
+               </div>
+
+          </div>
+     </section>
+
+
+     <!-- ABOUT -->
+     <section id="about">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-6 col-sm-6">
+                         <div class="about-info">
+                              <h2 class="wow fadeInUp" data-wow-delay="0.6s">Welcome to HealHub</h2>
+                              <div class="wow fadeInUp" data-wow-delay="0.8s">
+                                   <p>Welcome to HealHub - where healing is not just a destination, but a continuous, enriching voyage.</p>
+                                   <p>At HealHub, we invite you to embark on a transformative experience that transcends the conventional boundaries of well-being. Your journey towards a healthier, more fulfilling life begins here.</p>
+                              </div>
+                              <figure class="profile wow fadeInUp" data-wow-delay="1s">
+                                   <img src="{{ url_for('static', filename='author-image.jpg') }}" class="img-responsive" alt="">
+                                   <figcaption>
+                                        <h3>Dr. Neil Jackson</h3>
+                                        <p>General Principal</p>
+                                   </figcaption>
+                              </figure>
+                         </div>
+                    </div>
+                    
+               </div>
+          </div>
+     </section>
+
+
+     <!-- TEAM -->
+     <section id="team" data-stellar-background-ratio="1">
+          <div class="btn-container">
+               <form method="GET" action="{{ url_for('display_doctor_info_Users') }}">
+                   <button class="btn">View Doctors</button>
+               </form>
+           </div>
+           <br>
+           <br>
+           <br>
+           <div class="btn-container">
+               <form method="GET" action="{{ url_for('display_Nurse_info_Users') }}">
+                   <button class="btn">View Nurses</button>
+               </form>
+           </div>
+           <br>
+           <br>
+           
+          <!-- <div class="container">
+               <div class="row">
+
+                    <div class="col-md-6 col-sm-6">
+                         <div class="about-info">
+                              <h2 class="wow fadeInUp" data-wow-delay="0.1s">Our Doctors</h2>
+                         </div>
+                    </div>
+                    
+
+                    <div class="clearfix"></div>
+
+                    <div class="col-md-4 col-sm-6">
+                         <div class="team-thumb wow fadeInUp" data-wow-delay="0.2s">
+                              <img src="{{ url_for('static', filename='team-image1.jpg') }}" class="img-responsive" alt="">
+
+                                   <div class="team-info">
+                                        <h3>Nate Baston</h3>
+                                        <p>General Principal</p>
+                                        <div class="team-contact-info">
+                                             <p><i class="fa fa-phone"></i> 010-020-0120</p>
+                                             <p><i class="fa fa-envelope-o"></i> <a href="#">HealHub@hb.com</a></p>
+                                        </div>
+                                        <ul class="social-icon">
+                                             <li><a href="#" class="fa fa-linkedin-square"></a></li>
+                                             <li><a href="#" class="fa fa-envelope-o"></a></li>
+                                        </ul>
+                                   </div>
+
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                         <div class="team-thumb wow fadeInUp" data-wow-delay="0.4s">
+                              <img src="{{ url_for('static', filename='team-image2.jpg') }}" class="img-responsive" alt="">
+
+                                   <div class="team-info">
+                                        <h3>Jason Stewart</h3>
+                                        <p>Pregnancy</p>
+                                        <div class="team-contact-info">
+                                             <p><i class="fa fa-phone"></i> 010-070-0170</p>
+                                             <p><i class="fa fa-envelope-o"></i> <a href="#">pregnancy@company.com</a></p>
+                                        </div>
+                                        <ul class="social-icon">
+                                             <li><a href="#" class="fa fa-facebook-square"></a></li>
+                                             <li><a href="#" class="fa fa-envelope-o"></a></li>
+                                             <li><a href="#" class="fa fa-flickr"></a></li>
+                                        </ul>
+                                   </div>
+
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                         <div class="team-thumb wow fadeInUp" data-wow-delay="0.6s">
+                              <img src="{{ url_for('static', filename='team-image3.jpg') }}" class="img-responsive" alt="">
+
+                                   <div class="team-info">
+                                        <h3>Miasha Nakahara</h3>
+                                        <p>Cardiology</p>
+                                        <div class="team-contact-info">
+                                             <p><i class="fa fa-phone"></i> 010-040-0140</p>
+                                             <p><i class="fa fa-envelope-o"></i> <a href="#">cardio@company.com</a></p>
+                                        </div>
+                                        <ul class="social-icon">
+                                             <li><a href="#" class="fa fa-twitter"></a></li>
+                                             <li><a href="#" class="fa fa-envelope-o"></a></li>
+                                        </ul>
+                                   </div>
+
+                         </div>
+                    </div>
+                    
+               </div>
+          </div> -->
+     </section>
+
+
+     <!-- NEWS -->
+     <section id="news" data-stellar-background-ratio="2.5">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-12 col-sm-12">
+                         <!-- SECTION TITLE -->
+                         <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
+                              <h2>Latest News</h2>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                         <!-- NEWS THUMB -->
+                         <div class="news-thumb wow fadeInUp" data-wow-delay="0.4s">
+                              <a >
+                                   <img src="{{ url_for('static', filename='news-image1.jpg') }}" class="img-responsive" alt="">
+                              </a>
+                              <div class="news-info">
+                                   <span>March 08, 2023</span>
+                                   <h3><a >Breakthrough in Cancer Research: Promising Results for New Treatment</a></h3>
+                                   <p>In a groundbreaking development, researchers at HealHub report significant progress in the development of a novel cancer treatment. The experimental therapy has shown promising results in early-stage clinical trials, offering hope for more effective and targeted cancer care</p>
+                                   <div class="author">
+                                        <img src="{{ url_for('static', filename='author-image.jpg') }}" class="img-responsive" alt="">
+                                        <div class="author-info">
+                                             <h5>Emily Rodriguez</h5>
+                                             <p>Doctor</p>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                         <!-- NEWS THUMB -->
+                         <div class="news-thumb wow fadeInUp" data-wow-delay="0.6s">
+                              <a >
+                                   <img src="{{ url_for('static', filename='news-image2.jpg') }}" class="img-responsive" alt="">
+                              </a>
+                              <div class="news-info">
+                                   <span>February 20, 2023</span>
+                                   <h3><a>Telemedicine Expansion: Enhancing Access to Healthcare</a></h3>
+                                   <p>In response to the evolving landscape of healthcare, HealHub announces the expansion of telemedicine services. Dr. Michael Turner, Chief Medical Officer at HealHub, discusses the initiative, aiming to provide convenient and accessible healthcare options for users to connect with healthcare professionals from the comfort of their homes.</p>
+                                   <div class="author">
+                                        <img src="{{ url_for('static', filename='author-image.jpg') }}" class="img-responsive" alt="">
+                                        <div class="author-info">
+                                             <h5>Dr. Michael Turner</h5>
+                                             <p>Chief Medical Officer at HealHub</p>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                         
+                         <div class="news-thumb wow fadeInUp" data-wow-delay="0.8s">
+                              <a >
+                                   <img src="{{ url_for('static', filename='news-image3.jpg') }}" class="img-responsive" alt="">
+                              </a>
+                              <div class="news-info">
+                                   <span>January 27, 2023</span>
+                                   <h3><a>Promoting Healthy Living</a></h3>
+                                   <p>Dr. Sophia Turner, a leading expert at HealHub, shares practical tips for maintaining a healthy lifestyle. In her latest article, she discusses the importance of regular exercise, balanced nutrition, and sufficient sleep in promoting overall well-being.</p>
+                                   <div class="author">
+                                        <img src="{{ url_for('static', filename='author-image.jpg') }}" class="img-responsive" alt="">
+                                        <div class="author-info">
+                                             <h5>Dr. Sophia Turner</h5>
+                                             <p>leading expert at HealHub</p>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+
+               </div>
+          </div>
+     </section>
+
+
+     <!-- MAKE AN APPOINTMENT -->
+     <section id="appointment" data-stellar-background-ratio="3">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-6 col-sm-6">
+                         <img src="{{ url_for('static', filename='appointment-image.jpg') }}" class="img-responsive" alt="">
+                    </div>
+
+                    <div class="col-md-6 col-sm-6">
+                         <!-- CONTACT FORM HERE -->
+                         <form id="appointment-form" role="form" method="post" action="#">
+
+                              <!-- SECTION TITLE -->
+                              <div class="section-title wow fadeInUp" data-wow-delay="0.4s">
+                                   <h2>Make an appointment</h2>
+                              </div>
+
+                              <div class="wow fadeInUp" data-wow-delay="0.8s">
+                                   <div class="col-md-6 col-sm-6">
+                                        <label for="name">Name</label>
+                                        <input type="text" class="form-control" id="name" name="name" placeholder="Full Name">
+                                   </div>
+
+                                   <div class="col-md-6 col-sm-6">
+                                        <label for="email">Email</label>
+                                        <input type="email" class="form-control" id="email" name="email" placeholder="Your Email">
+                                   </div>
+
+                                   <div class="col-md-6 col-sm-6">
+                                        <label for="date">Select Date</label>
+                                        <input type="date" name="date" value="" class="form-control">
+                                   </div>
+
+                                   <div class="col-md-6 col-sm-6">
+                                        <label for="select">Select Department</label>
+                                        <select class="form-control">
+                                             <option>General Health</option>
+                                             <option>Cardiology</option>
+                                             <option>Dental</option>
+                                             <option>Medical Research</option>
+                                        </select>
+                                   </div>
+
+                                   <div class="col-md-12 col-sm-12">
+                                        <label for="telephone">Phone Number</label>
+                                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone">
+                                        <label for="Message">Additional Message</label>
+                                        <textarea class="form-control" rows="5" id="message" name="message" placeholder="Message"></textarea>
+                                        <button type="submit" class="form-control" id="cf-submit" name="submit">Submit Button</button>
+                                   </div>
+                              </div>
+                        </form>
+                    </div>
+
+               </div>
+          </div>
+     </section>
+
+
+     <!-- GOOGLE MAP -->
+     <section id="google-map">
+
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6914.648195083051!2d31.060973942290577!3d29.941354999902305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145851c4e4764643%3A0xc68aa33599a96301!2sZewail%20City%20of%20Science%20and%20Technology!5e0!3m2!1sen!2seg!4v1704904586687!5m2!1sen!2seg" width="100%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+     </section>           
+
+
+     <!-- FOOTER -->
+     <footer data-stellar-background-ratio="5">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-4 col-sm-4">
+                         <div class="footer-thumb"> 
+                              <h4 class="wow fadeInUp" data-wow-delay="0.4s">Contact Info</h4>
+                              <p>HealHub Headquarters
+                                   Address:
+                                   ZewailCity,cairo,Egypt
+                                   <br>
+                                   Phone:
+                                   +1 (123) 456-7890
+                                   <br>
+                                   Email:
+                                   info@healhub.com</p>
+
+                              <div class="contact-info">
+                                   <p>010-070-0170</p>
+                                   <p> info@healhub.com </p>
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-4"> 
+                         <div class="footer-thumb"> 
+                              <h4 class="wow fadeInUp" data-wow-delay="0.4s">Latest News</h4>
+                              <div class="latest-stories">
+                                   <div class="stories-image">
+                                        <a><img src="{{ url_for('static', filename='news-image.jpg') }}" class="img-responsive" alt=""></a>
+                                   </div>
+                                   <div class="stories-info">
+                                        <a ><h5>Amazing Technology</h5></a>
+                                        <span>March 08, 2023</span>
+                                   </div>
+                              </div>
+
+                              <div class="latest-stories">
+                                   <div class="stories-image">
+                                        <a><img src="{{ url_for('static', filename='news-image.jpg') }}" class="img-responsive" alt=""></a>
+                                   </div>
+                                   <div class="stories-info">
+                                        <a><h5>New Healing Process</h5></a>
+                                        <span>February 20, 2023</span>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-4"> 
+                         <div class="footer-thumb">
+                              <div class="opening-hours">
+                                   <h4 class="wow fadeInUp" data-wow-delay="0.4s">Opening Hours</h4>
+                                   <p>Monday - Friday <span>06:00 AM - 10:00 PM</span></p>
+                                   <p>Saturday <span>09:00 AM - 08:00 PM</span></p>
+                                   <p>Sunday <span>Closed</span></p>
+                              </div> 
+
+                         </div>
+                    </div>
+
+                    <div class="col-md-12 col-sm-12 border-top">
+                         <div class="col-md-4 col-sm-6">
+                              <div class="copyright-text"> 
+                                   <p>Copyright &copy; 2023 Your Company 
+                                   </p>
+                              </div>
+                         </div>
+                         <div class="col-md-6 col-sm-6">
+                              <div class="footer-link"> 
+                                   <a >Laboratory Tests</a>
+                                   <a>Departments</a>
+                                   <a>Insurance Policy</a>
+                                   <a>Careers</a>
+                              </div>
+                         </div>
+                         <div class="col-md-2 col-sm-2 text-align-center">
+                              <div class="angle-up-btn"> 
+                                  <a href="#top" class="smoothScroll wow fadeInUp" data-wow-delay="1.2s"><i class="fa fa-angle-up"></i></a>
+                              </div>
+                         </div>   
+                    </div>
+                    
+               </div>
+          </div>
+     </footer>
+
+
+     <script src="{{ url_for('static', filename='jquery.js') }}"></script>
+     <script src="{{ url_for('static', filename='owl.carousel.min.js') }}"></script>
+     <script src="{{ url_for('static', filename='bootstrap.min.js') }}"></script>
+     <script src="{{ url_for('static', filename='jquery.sticky.js') }}"></script>
+     <script src="{{ url_for('static', filename='jquery.stellar.min.js') }}"></script>
+     <script src="{{ url_for('static', filename='wow.min.js') }}"></script>
+     <script src="{{ url_for('static', filename='smoothscroll.js') }}"></script>
+     <script src="{{ url_for('static', filename='custom.js') }}"></script>
+
 </body>
 </html>

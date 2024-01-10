@@ -3,8 +3,12 @@
 
 <head>
     <title>Nurse Data</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <style>
+                  .btn {
+              padding: 15px 30px;
+              font-size: 18px; 
+          }
+          
         
         .styled-table {
     border-collapse: collapse;
@@ -38,11 +42,6 @@
     font-weight: bold;
     color: #009879;
 }
-        .delete-button {
-            cursor: pointer;
-            color: red;
-            font-weight: bold;
-        }
     </style>
 </head>
 
@@ -51,33 +50,25 @@
     <table border="1" class="styled-table">
         <tr>
             <th>Name</th>
-            <th>Age</th>
             <th>ID</th>
-            <th>Salary</th>
-            <th>Gender</th>
-            <th>Action</th> <!-- Add a new column for the delete button -->
         </tr>
         {% for nurse in data %}
         <tr class="active-row"  id="row3">
             <td>{{ nurse['Name'] }}</td>
-            <td>{{ nurse['Age'] }}</td>
             <td>{{ nurse['ID'] }}</td>
-            <td>{{ nurse['Salary'] }}</td>
-            <td>{{ nurse['Gender'] }}</td>
             
-            <td class="delete-button" onclick="deleteRow('row3')">Delete</td>
         </tr>
         {% endfor %}
 
     </table>
 
-    <script>
-        
-        function deleteRow(rowId) {
-            var row = document.getElementById(rowId); 
-            row.parentNode.removeChild(row); 
-        }
-    </script>
+    <div class="btn-container">
+        <form method="GET" action="{{ url_for('QuitNormalUser') }}">
+            <button class="btn">Quit</button>
+        </form>
+    </div>
+
+
 </body>
 
 </html>

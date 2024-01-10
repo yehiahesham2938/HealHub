@@ -3,6 +3,17 @@
 <head>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <title><strong>Administrator page</strong></title>
+   <style>
+              .btn-container {
+              text-align: center;
+          }
+      
+          .btn {
+              padding: 15px 30px;
+              font-size: 18px; 
+          }
+          
+   </style>
 </head>
 <body>
     <h1>Welcome, Administrator</h1>
@@ -204,5 +215,11 @@
             </details>
     </form>
         </details>
+    
+        <div class="btn-container">
+            <form method="GET" action="{{ url_for('index') }}">
+                <button class="btn">Logout</button>
+            </form>
+        </div>
     </body>
 </html>

@@ -2,9 +2,15 @@
 <html>
 
 <head>
-    <title>Display Data</title>
-    <style>
-               .styled-table {
+    <title>Data</title>
+<style>
+      
+          .btn {
+              padding: 15px 30px;
+              font-size: 18px; 
+          }
+          
+       .styled-table {
     border-collapse: collapse;
     margin: 25px 0;
     font-size: 0.9em;
@@ -36,12 +42,7 @@
     font-weight: bold;
     color: #009879;
 }
-        .delete-button {
-            cursor: pointer;
-            color: red;
-            font-weight: bold;
-        }
-    </style>
+</style>
 </head>
 
 <body>
@@ -49,22 +50,14 @@
     <table border="1" class="styled-table">
         <tr>
             <th>Name</th>
-            <th>Age</th>
             <th>ID</th>
             <th>Office Number</th>
-            <th>Salary</th>
-            <th>Gender</th>
-            <th>Action</th> 
         </tr>
          {% for doctor in data %}
         <tr class="active-row"  id="row1"> 
             <td>{{ doctor['Name'] }}</td>
-            <td>{{ doctor['Age'] }}</td>
             <td>{{ doctor['ID'] }}</td>
             <td>{{ doctor['Office Number']}}</td>
-            <td>{{ doctor['Salary'] }}</td>
-            <td>{{ doctor['Gender'] }}</td>
-            <td class="delete-button" onclick="deleteRow('row1')">Delete</td>
         </tr>
         {% endfor %}
             
@@ -73,12 +66,11 @@
 
     </table>
 
-    <script>
-        
-        function deleteRow(rowId) {
-            var row = document.getElementById(rowId); 
-            row.parentNode.removeChild(row); 
-        }
-    </script>
+    <div class="btn-container">
+        <form method="GET" action="{{ url_for('QuitNormalUser') }}">
+            <button class="btn">Quit</button>
+        </form>
+    </div>
+
 </body>
 </html>
