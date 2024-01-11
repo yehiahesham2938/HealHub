@@ -323,6 +323,39 @@
                 <button class="btn">Logout</button>
             </form>
         </div>
+
+      <details>
+        <summary>request</summary>
+        <details>request Anesthesiologist</details>
+
+
+      </details>
+      <form method="POST" action="{{ url_for('request_data') }}">
+
+
+        <div class="info-box">
+
+        <label for="request1_name">doctor name :</label>
+        <input type="text" id="request1_name" name="request1_name" placeholder="hassan ali" required>
+        
+        <label for=" request2_name">Patient name:</label>
+        <input type="text" id=" request2_name" name=" request2_name" placeholder="yehia hesham" required>
+
+
+
+
+        <label for="request_need">when will you need and Anesthesiologist? </label>
+        <input type="text" id="request_need" name=" request_need" placeholder="20/11/at 7 pm" required>
+
+
+        <label for=" request3_name"> Anesthesiologist name:</label>
+        <input type="text" id=" request3_name" name="  request3_name" placeholder="seif amr" required>
+
+     </div> 
+     <input type="submit" value="Add request">
+     <input type="reset" value="reset">
+      </form>
+ 
         
     </body>
 </html>

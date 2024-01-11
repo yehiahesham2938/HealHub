@@ -10,7 +10,7 @@ Anesthesiologists_data=[]
 Room_data=[]
 Attendance=[]
 medicines_data=[]
-
+Request_data_list = []
 @app.route('/', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
@@ -245,6 +245,34 @@ def add_medicine():
 def display_medicine_info():
     data=[]
     return render_template('medicine_info.html', data=medicines_data)
+
+
+
+
+ # ... (previous imports and variable definitions)
+
+   # Renamed to avoid conflict with the function name
+
+# ... (previous route handlers)
+
+@app.route('/request_data', methods=['POST'])
+def request_data():
+    request_entry = {
+        'Name1': request.form.get('request1_name'),
+        'Name2': request.form.get('request2_name'),
+        'Name3': request.form.get('request3_name'),
+        'Date_need': request.form.get('request_need'),
+    }
+
+    Request_data_list.append(request_entry)  # Corrected variable name
+
+    return render_template('administrator.html', data=Request_data_list)
+
+@app.route('/display_request_info', methods=['GET'])
+def display_request_info():
+    return render_template('request_info.html', data=Request_data_list)
+
+# ... (other routes and if __name__ == '__main__' block)
 
 
 
