@@ -230,10 +230,10 @@ def display_Attendance_info():
 @app.route('/add_medicine', methods=['POST'])
 def add_medicine():
     medicine_data = {
-        'Name': request.form.get(' Medicine_name'),
-        'price': request.form.get(' Medicine_price'),
-        'stock': request.form.get(' Medicine_stock'),
-        'need': request.form.get(' Medicine_need'),
+        'Name': request.form.get('Medicine_name'),
+        'price': request.form.get('Medicine_price'),
+        'stock': request.form.get('Medicine_stock'),
+        'need': request.form.get('Medicine_need'),
      }
 
     medicines_data.append(medicine_data)
@@ -250,4 +250,11 @@ def display_medicine_info():
 
 
 if __name__ == '__main__':
-    app.run(host = '0.0.0.0' , port= 80)
+    app.run()
+
+
+
+
+
+
+     

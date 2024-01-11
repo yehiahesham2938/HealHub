@@ -395,30 +395,104 @@
      </section>           
 
 
+
+
+     <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Your Web Page</title>
+          <style>
+              /* Your existing styles */
+      
+              /* Styles for the feedback modal */
+              .modal {
+                  display: none;
+                  position: fixed;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+                  background-color: #fff;
+                  padding: 20px;
+                  border-radius: 5px;
+                  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+              }
+      
+          
+              .overlay {
+                  display: none;
+                  position: fixed;
+                  top: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 100%;
+                  background: rgba(0, 0, 0, 0.5);
+              }
+          </style>
+      </head>
+      
+      <body>
+
+
      <!-- FOOTER -->
      <footer data-stellar-background-ratio="5">
           <div class="container">
-               <div class="row">
+              <div class="row">
+      
+                  <div class="col-md-4 col-sm-4">
+                      <div class="footer-thumb">
+                          <h4 class="wow fadeInUp" data-wow-delay="0.4s">Contact Info</h4>
+                          <p>HealHub Headquarters Address: ZewailCity, Cairo, Egypt <br>
+                              Phone: +1 (123) 456-7890 <br>
+                              Email: info@healhub.com
+                          </p>
+      
+                          <div class="contact-info">
+                              <p>010-070-0170</p>
+                              <p>info@healhub.com</p>
+                          </div>
+      
+                          
+                          <button onclick="openFeedbackForm()" class="btn btn-primary">Enter Feedback</button>
+                      </div>
+                  </div>
+      
+              </div>
+          </div>
+      </footer>
+      
+      <div class="overlay" id="overlay"></div>
+    <div class="modal" id="feedbackModal">
+        <h2>Enter Your Feedback</h2>
+        <textarea id="feedbackInput" rows="4" cols="50" placeholder="Type your feedback here..."></textarea>
+        <br>
+        <button onclick="submitFeedback()">Submit</button>
+        <button onclick="closeFeedbackForm()">Cancel</button>
+    </div>
 
-                    <div class="col-md-4 col-sm-4">
-                         <div class="footer-thumb"> 
-                              <h4 class="wow fadeInUp" data-wow-delay="0.4s">Contact Info</h4>
-                              <p>HealHub Headquarters
-                                   Address:
-                                   ZewailCity,cairo,Egypt
-                                   <br>
-                                   Phone:
-                                   +1 (123) 456-7890
-                                   <br>
-                                   Email:
-                                   info@healhub.com</p>
+   
 
-                              <div class="contact-info">
-                                   <p>010-070-0170</p>
-                                   <p> info@healhub.com </p>
-                              </div>
-                         </div>
-                    </div>
+    <script>
+        function openFeedbackForm() {
+           
+            document.getElementById('overlay').style.display = 'block';
+            document.getElementById('feedbackModal').style.display = 'block';
+        }
+
+        function closeFeedbackForm() {
+            
+            document.getElementById('overlay').style.display = 'none';
+            document.getElementById('feedbackModal').style.display = 'none';
+        }
+
+        function submitFeedback() {
+            
+            alert("Feedback submitted! Thank you for your input.");
+            closeFeedbackForm(); 
+        }
+    </script>
+</body>
+
+</html>
 
                     <div class="col-md-4 col-sm-4"> 
                          <div class="footer-thumb"> 
